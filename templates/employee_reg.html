@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Account</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='employee_reg.css')}}">
+</head>
+<body>
+    <div class="registration-container">
+        <h2>Employee Registration Account</h2>
+        {% if error %}
+        <div class="error-message">
+            <p>{{ error }}</p>
+        </div>
+        {% endif %}
+        <form action="/employee_registration" method="POST">
+            <div class="form-row">
+                <input type="text" name="first_name" placeholder="First Name" required>
+                <input type="text" name="last_name" placeholder="Last Name" required>
+            </div>
+
+            <div class="form-row">
+                <input type="text" name="job_title" placeholder="Job Title" required>
+                <input type="text" name="department" placeholder="Department" required>
+            </div>
+
+            <div class="form-row">
+                <select name="gender" required>
+                    <option value="" disabled selected>Gender</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                </select>
+                
+                <input type="date" name="date_of_birth" placeholder="Date of Birth" required>
+                <select name="marital_status" required>
+                    <option value="" disabled selected>Marital Status</option>
+                    <option value="married">Married</option>
+                    <option value="single">Single</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" name="contact_number" placeholder="Contact Number" required>
+            </div>
+
+            <div class="form-row-full">
+                <input type="text" name="street_address" placeholder="Street Address" required>
+            </div>
+
+            <div class="form-row">
+                <input type="text" name="city" placeholder="City" required>
+                <input type="text" name="state" placeholder="State" required>
+            </div>
+
+            <div class="form-row">
+                <input type="text" name="postcode" placeholder="Postcode" required>
+                <input type="text" name="country" placeholder="Country" required>
+            </div>
+
+            <div class="form-row">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

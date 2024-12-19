@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.registration-container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+}
+
+.registration-form {
+    padding: 30px;
+    background-color: #fff;
+    flex: 1;
+    width: 400px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.registration-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.registration-form input[type="email"],
+.registration-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.registration-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3b3b8f;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.registration-form button:hover {
+    background-color: #2a2a7a;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.password-guidelines-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.password-guidelines-chatbox {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    position: relative;
+    max-width: 300px;
+}
+
+.password-guidelines-chatbox::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #f0f0f0 transparent transparent;
+}
+
+.password-guidelines-chatbox h3 {
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.password-guidelines-chatbox ul {
+    list-style-type: none;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.password-guidelines-chatbox ul ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.password-guidelines-chatbox li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+}
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+}

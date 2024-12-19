@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In or Create an Account</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='login.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-section">
+            <img src="{{url_for('static', filename='iyc_logo.png')}}" alt="IYC Logo" class="logo">
+        </div>
+        <div class="address-section"> 
+            <p class="address">International Youth Centre (IYC) </p>
+            <p class="address">Jalan Yaacob Latif, Bandar Tun Razak, </p>    
+            <p class="address">56000 Cheras Kuala Lumpur</p>
+            <p class="address">Tel : 03-9171 9204/5</p>
+            <p class="address">Fax : 03-9172 3599/6682</p>
+            <p class="address">E-mail : admin@iyckul.org.my</p>
+        </div>
+    </div>
+
+    <div class="login-form">
+        <h2>Sign In or Create an Account</h2>
+
+        {% if error %}
+        <div class="error-message">
+            <p>{{ error }}</p>
+        </div>
+        {% endif %}
+
+        
+        <form action="/login" method="POST">
+            <input type="email" name="email" placeholder="Email Address" required>
+            
+            <input type="password" name="password" placeholder="Password" required>
+            <div class="options">
+                <a href="#">Forget Password?</a>
+            </div>
+            <button type="submit">Login</button>
+            <div class="create-account">
+                <a href="{{ url_for('account_registration', user_type='employee') }}">Create Account (Employee)</a>
+                <a href="{{ url_for('account_registration', user_type='customer') }}">Create Account (Customer)</a>
+            </div>
+            <div class="terms">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I accept the terms & conditions</label>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

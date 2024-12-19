@@ -1,0 +1,176 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Light Gray Background */
+}
+
+/* Header Section */
+header {
+    background-color: #f5f5f5;
+    color: #3b3b8f; /* Blue Theme Color */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #3b3b8f;
+    font-size: 35px;
+    margin-top: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #b6e2ec; /* Light Cyan */
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #3b3b8f; /* Theme Blue */
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li a i {
+    margin-right: 8px;
+}
+
+.navbar ul li a:hover {
+    color: #2a2a7a; /* Darker Blue on Hover */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Content Section */
+.data-table {
+    margin: 20px auto;
+    width: 70%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.content {
+    padding: 20px;
+}
+
+/* Card Styling */
+.card {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.card-header {
+    background-color: #b6e2ec; /* Light Cyan */
+    color: #3b3b8f; /* Theme Blue */
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-header small {
+    display: block;
+    font-size: 12px;
+    color: #666;
+}
+
+.card-body {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.card-body h5 {
+    margin: 5px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-body p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Grid Layout for Content */
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 10px 30px; /* Smaller gap vertically and horizontally */
+}
+
+.col-md-6 {
+    box-sizing: border-box;
+    padding: 5px 10px; /* Reduced padding */
+}
+
+/* Remove extra space on the last column */
+.row .col-md-6:nth-child(even) {
+    padding-right: 0; /* Removes right space for the last column */
+}
+
+/* Action Buttons */
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    gap: 10px; /* Add spacing between buttons */
+}
+
+
+/* Action Buttons - Centered */
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end; /* Center content horizontally */
+    gap: 10px; /* Add spacing between buttons */
+}
+
+.action-buttons .btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+}
+
+.btn-success {
+    background-color: #3b3b8f; 
+}
+
+.btn-danger {
+    background-color: #b10032; 
+}
+
+.btn-success:hover {
+    background-color: #2a2a7a; 
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-danger:hover {
+    background-color: #8b0028; 
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #3b3b8f;
+    transition: background-color 0.3s ease-in-out;
+}

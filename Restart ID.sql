@@ -1,0 +1,19 @@
+SET FOREIGN_KEY_CHECKS = 0;
+SET SQL_SAFE_UPDATES = 0;
+
+DELETE FROM employee_reg_acc;
+DELETE FROM customer_account;
+DELETE FROM admin_page;
+DELETE FROM login_details;
+DELETE FROM account_reg;
+
+ALTER TABLE employee_reg_acc AUTO_INCREMENT = 1;
+ALTER TABLE customer_account AUTO_INCREMENT = 1;
+ALTER TABLE admin_page AUTO_INCREMENT = 1;
+ALTER TABLE login_details AUTO_INCREMENT = 1;
+ALTER TABLE account_reg AUTO_INCREMENT = 1;
+
+SET SQL_SAFE_UPDATES = 1;
+SET FOREIGN_KEY_CHECKS = 1;
+
+

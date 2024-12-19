@@ -1,0 +1,153 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #f5f5f5;
+    color: #3b3b8f;
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #b6e2ec;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.navbar ul li a {
+    color: #3b3b8f;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbar ul li::after {
+    content: "/";
+    color: #333;
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navbar ul li:last-child::after {
+    content: "";
+}
+
+.navbar ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #b6e2ec;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 0;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.navbar ul li .dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #3b3b8f;
+}
+
+.navbar ul li .dropdown-content a:hover {
+    background-color: #e0e0e0;
+}
+
+.navbar ul li:hover .dropdown-content {
+    display: block;
+}
+
+.navbar ul li a i {
+    margin-right: 5px; 
+}
+
+h1 {
+    color: #3b3b8f;
+    font-size: 35px;
+    margin-top: 20px;
+}
+
+
+.data-table {
+    margin: 20px auto;
+    width: 90%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.data-table table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.data-table th, .data-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table th {
+    background-color: #3b3b8f;
+    color: #fff;
+    width: auto;
+}
+.data-table th:nth-child(6) {
+    text-align: center; 
+}
+
+.data-table td {
+    text-align: center; /* Center-align content in all table cells */
+}
+
+.data-table td button {
+    background-color: #3b3b8f;
+    color: #fff;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.data-table td:nth-child(6) {
+    text-align: center; 
+}
+
+
+.data-table td button:hover {
+    background-color: #2a2a7a;
+}
+
+/* Status Text Styling */
+.status-text {
+    font-weight: bold;
+}
+
+.status-approved {
+    color: green;
+}
+
+.status-rejected {
+    color: red;
+}
+
+.status-pending {
+    color: orange;
+}

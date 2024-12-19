@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Account</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='employee_reg.css')}}">
+    <title>Customer Registration</title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+
+        /* The Modal (background) */
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          padding-top: 100px; /* Location of the box */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+          background-color: #fefefe;
+          margin: auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+          color: #aaaaaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        .form-inline {
+          display: flex;
+          flex-flow: row wrap;
+          align-items: center;
+        }
+
+        .form-inline input {
+          vertical-align: middle;
+          margin: 5px 10px 5px 0;
+          padding: 10px;
+          background-color: #fff;
+          border: 1px solid #ddd;
+        }
+
+        .form-inline button {
+          padding: 10px 20px;
+          background-color: dodgerblue;
+          border: 1px solid #ddd;
+          color: white;
+        }
+
+        .form-inline button:hover {
+          background-color: royalblue;
+        }
+    </style>
+</head>
+<body>
+  <div class="registration-container">
+    <h2>Edit Profile</h2>
+    <form method="POST">
+        <div class="form-row">
+          <input type="text" id="organization_name" name="organization_name" class="form-control" value="{{ account.organization_name }}" required>
+          <input type="text" id="ssm_number" name="ssm_number" class="form-control" value="{{ account.ssm_number }}" required>
+        </div>
+
+        <div class="form-row">
+          <input type="text" id="email_address" name="email_address" class="form-control" value="{{ account.email_address }}" required>
+          <input type="text" id="contact_number" name="contact_number" class="form-control" value="{{ account.contact_number }}" required> 
+        </div>
+
+        <div class="form-row">
+          <input type="text" id="street_address" name="street_address" class="form-control" value="{{ account.street_address }}" required>
+        </div>
+
+        <div class="form-row">
+          <input type="text" id="city" name="city" class="form-control" value="{{ account.city }}" required>
+          <input type="text" id="state" name="state" class="form-control" value="{{ account.state }}" required>
+        </div>
+        
+        <div class="form-row">
+          <input type="text" id="postcode" name="postcode" class="form-control" value="{{ account.postcode }}" required>
+          <input type="text" id="country" name="country" class="form-control" value="{{ account.country }}" required>
+        </div>
+
+        <div class="mb-3">
+          <p>Purpose for account register:</p>
+          <input type="radio" id="business" name="purpose" value="business">
+          <label for="business">Business</label><br>
+          <input type="radio" id="education" name="purpose" value="education">
+          <label for="education">Education</label><br>
+          <input type="radio" id="event" name="purpose" value="event">
+          <label for="event">Event</label><br>
+          <input type="radio" id="others" name="purpose" value="others">
+          <label for="others">Others</label><br>
+        </div>
+
+        <div class="form-row">
+            <button type="submit" value="Submit" id="myBtn">Update</button>
+        </div>
+
+        <!-- <div class="form-row">
+          <input type="submit" value="Submit" id="myBtn">
+        </div> -->
+    </form>
+
+    <!-- Modal Button -->
+
+    <!-- Trigger/Open The Modal -->
+    <!-- <button >Submit</button> -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Registration Sent!</h2>
+        <p>Pending for approval from IYC admin. Once approved! You will be able to view your profile and process the resident request. Thank you.</p>
+    </div>
+
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
+   
