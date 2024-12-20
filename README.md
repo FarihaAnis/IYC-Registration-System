@@ -35,6 +35,11 @@ The **IYC Registration System** is a web application designed to manage registra
   - Approve or reject customer account registrations.
   - Delete customer records when necessary.
 
+### Workflow Overview
+Below is a visual representation of the workflow for both employees and customers:
+
+![Workflow](https://github.com/user-attachments/assets/5a36fbdc-49bf-43d2-8f44-860d07438167)
+
 ### 2. Database Overview
 The project uses a **MySQL database** with tables designed for storing user information, employee details, and customer records. Key aspects of the database include:
 - **Primary Keys**: Ensure each record is uniquely identifiable.
@@ -59,3 +64,6 @@ The project implements the **CRUD** concept using Flask:
 
 ## Summary
 This project demonstrates how to build a registration system with role-based access and implement CRUD functionality using Flask and MySQL. It also highlights the use of a well-structured database with primary and foreign keys to ensure efficient data management. 
+
+
+
